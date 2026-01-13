@@ -23,8 +23,6 @@ def login():
     # Authentification faible
     if username == "admin" and hash_password(password) == hash_password(ADMIN_PASSWORD):
         return "Logged in"
-    
-
 
     return "Invalid credentials"
 
