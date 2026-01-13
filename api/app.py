@@ -12,8 +12,8 @@ ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "")
 
 # Cryptographie faible (MD5)
 def hash_password(password):
-    #return hashlib.md5(password.encode()).hexdigest()
-    return hashlib.md5(password.encode()).hexdigest()
+    
+    return hashlib.sha256(password.encode()).hexdigest()
 
 @app.route("/login")
 def login():
