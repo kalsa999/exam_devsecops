@@ -21,13 +21,9 @@ def login():
     password = request.args.get("password")
 
     # Authentification faible
-    #if username == "admin" and hash_password(password) == hash_password(ADMIN_PASSWORD):
-     #   return "Logged in"
-    if (
-        username == "admin"
-        and hash_password(password) == hash_password(ADMIN_PASSWORD)
-    ):
-        return {"status": "Logged in"}
+    if username == "admin" and hash_password(password) == hash_password(ADMIN_PASSWORD):
+        return "Logged in"
+    
 
 
     return "Invalid credentials"
